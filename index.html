@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Training App</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header class="site-header traditional">
+    <a class="logo" href="#home" aria-label="Home">
+      <img src="assets/images/logo.svg" alt="Training App" width="164" height="44" />
+    </a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" data-view-link="home" aria-current="page">Home</a></li>
+        <li><a href="#gallery" data-view-link="gallery">Gallery</a></li>
+  <li><a href="#contact" id="contactNavLink">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Full-bleed hero outside main width constraint -->
+  <section class="hero hero-fullbleed" aria-label="Hero image" data-view="home">
+    <img src="assets/images/hero.svg" alt="Hero placeholder" />
+  </section>
+
+  <main>
+    <!-- HOME VIEW -->
+    <div id="view-home" class="app-view" data-view="home">
+      <!-- Image Slider -->
+      <section class="slider-section" aria-label="Home image slider">
+        <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Featured images">
+          <div class="slides" aria-live="polite">
+            <figure class="slide" data-index="0"><img src="assets/images/slide1.svg" alt="Slide 1" /></figure>
+            <figure class="slide" data-index="1"><img src="assets/images/slide2.svg" alt="Slide 2" /></figure>
+            <figure class="slide" data-index="2"><img src="assets/images/slide3.svg" alt="Slide 3" /></figure>
+          </div>
+          <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+          <button class="slider-btn next" aria-label="Next slide">›</button>
+          <div class="dots" role="tablist" aria-label="Slide selection"></div>
+        </div>
+      </section>
+
+      <!-- Three Additional Images (vertical stack) -->
+      <section class="stacked-images" aria-label="Additional images">
+        <figure><img src="assets/images/block1.svg" alt="Block image 1" /></figure>
+        <figure><img src="assets/images/block2.svg" alt="Block image 2" /></figure>
+        <figure><img src="assets/images/block3.svg" alt="Block image 3" /></figure>
+      </section>
+
+      <div id="loadNextSentinel" class="second-screen-sentinel" aria-hidden="true"></div>
+      <div id="secondScreenContainer" class="second-screen" hidden></div>
+    </div>
+
+    <!-- GALLERY VIEW (initially hidden) -->
+    <div id="view-gallery" class="app-view" data-view="gallery" hidden>
+      <section class="gallery-screen" aria-label="Gallery screen">
+        <div class="page-intro">
+          <h1>Gallery</h1>
+          <p>Responsive sample grid using existing placeholder assets.</p>
+        </div>
+        <!-- Gallery Slider -->
+        <section class="slider-section" aria-label="Gallery slider">
+          <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Gallery slides">
+            <div class="slides" aria-live="polite">
+              <figure class="slide" data-index="0"><img src="assets/images/slide1.svg" alt="Showcase 1" /></figure>
+              <figure class="slide" data-index="1"><img src="assets/images/slide2.svg" alt="Showcase 2" /></figure>
+              <figure class="slide" data-index="2"><img src="assets/images/slide3.svg" alt="Showcase 3" /></figure>
+            </div>
+            <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+            <button class="slider-btn next" aria-label="Next slide">›</button>
+            <div class="dots" role="tablist" aria-label="Slide selection"></div>
+          </div>
+        </section>
+        <!-- Image Grid -->
+        <section class="image-grid" aria-label="Gallery images">
+          <figure><img src="assets/images/slide1.svg" alt="Gallery slide 1" /></figure>
+          <figure><img src="assets/images/slide2.svg" alt="Gallery slide 2" /></figure>
+          <figure><img src="assets/images/slide3.svg" alt="Gallery slide 3" /></figure>
+          <figure><img src="assets/images/block1.svg" alt="Gallery block 1" /></figure>
+          <figure><img src="assets/images/block2.svg" alt="Gallery block 2" /></figure>
+          <figure><img src="assets/images/block3.svg" alt="Gallery block 3" /></figure>
+        </section>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">© 2025 Training App</footer>
+
+  <script src="scripts/slider.js" defer></script>
+  <script src="scripts/autoload.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
+  <script src="scripts/spa.js" defer></script>
+</body>
+</html>
