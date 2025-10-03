@@ -83,9 +83,15 @@ main { max-width:var(--max-width); margin:0 auto; padding:0 1rem 3rem; }
 
 .slider-section { background: var(--color-surface); padding:1.25rem 1rem 1.5rem; margin-top:2rem; border-radius:20px; box-shadow: var(--elevation-2); }
 .slider { position:relative; overflow:hidden; }
-.slides { display:flex; transition:var(--transition); touch-action:pan-y; }
-.slide { min-width:100%; user-select:none; }
-.slide img { width:100%; height:auto; }
+ .slides { display:flex; transition:var(--transition); touch-action:pan-y; gap:0; }
+/* Normalize each slide height using a fixed aspect ratio so differently sized images align */
+ .slide { min-width:100%; flex:0 0 100%; user-select:none; position:relative; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; overflow:hidden; background:#000; margin:0; }
+/* Older browsers without aspect-ratio support fallback */
+@supports not (aspect-ratio: 16/9) {
+  .slide { height:0; padding-top:56.25%; }
+  .slide > img { position:absolute; inset:0; }
+}
+ .slide img { width:100%; height:100%; object-fit:contain; flex:0 0 auto; background:#000; }
 .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.85); color: var(--color-text); box-shadow: var(--elevation-1); border:0; width:42px; height:42px; border-radius:50%; cursor:pointer; display:grid; place-items:center; font-size:1.4rem; backdrop-filter:blur(4px); }
 .slider-btn:hover { background:#ffffff; }
 .prev { left:.75rem; }
