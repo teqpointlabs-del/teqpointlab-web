@@ -14,7 +14,7 @@
       <div class="contact-grid">
         <div class="contact-image-col">
           <figure class="contact-illustration">
-            <img src="assets/images/contact-illustration.svg" alt="Get in touch" />
+            <img src="assets/images/TPLMOCKNTRAIN.jpg" alt="Get in touch" />
           </figure>
         </div>
         <div class="contact-form-col">
