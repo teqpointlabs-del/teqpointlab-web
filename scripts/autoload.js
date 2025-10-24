@@ -34,7 +34,7 @@
       </div>
       <section class="branches" aria-label="Branch locations">
         <h3 class="section-heading">Our Branches</h3>
-       <-- <ul class="branch-list">
+       <!-- <ul class="branch-list">
           <li><strong>New York</strong><span>USA</span></li>
           <li><strong>London</strong><span>UK</span></li>
           <li><strong>Berlin</strong><span>Germany</span></li>
