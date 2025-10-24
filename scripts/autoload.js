@@ -34,14 +34,14 @@
       </div>
       <section class="branches" aria-label="Branch locations">
         <h3 class="section-heading">Our Branches</h3>
-        <ul class="branch-list">
+       <-- <ul class="branch-list">
           <li><strong>New York</strong><span>USA</span></li>
           <li><strong>London</strong><span>UK</span></li>
           <li><strong>Berlin</strong><span>Germany</span></li>
           <li><strong>Sydney</strong><span>Australia</span></li>
           <li><strong>Tokyo</strong><span>Japan</span></li>
           <li><strong>Bangalore</strong><span>India</span></li>
-        </ul>
+        </ul> -->
         <figure class="branches-visual"><img src="assets/images/branches.svg" alt="Global branches visual" /></figure>
       </section>
       <section class="social-links" aria-label="Social media">
